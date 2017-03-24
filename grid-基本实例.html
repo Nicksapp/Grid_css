@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grid-基本实例</title>
+    <style media="screen">
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #1c1e22;
+        color: #fff;
+      }
+      .l-grid {
+        display: grid;
+      }
+      .l-grid > .l-grid__item {
+        border: 1px solid #fff;
+      }
+      .l-grid--4x4 > .l-grid__item {
+        width: auto;
+      }
+      .l-grid--4x4 {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, minmax(13rem, 1fr));
+      }
+
+      .l-span-column-2 {
+        grid-column-start: span 2;
+      }
+      .l-span-row-2 {
+        grid-row-start: span 2;
+      }
+      .l-full-height {
+        min-height: 100vh;
+      }
+      .align-center {
+        align-items: center;
+        justify-content: center;
+      }
+
+      .content {
+        padding: 3.5rem;
+        max-width: 400px;
+      }
+      .heading {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+      .description {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .theme-peach {
+        background: #fe5c5d;
+        color: #1c1e22;
+      }
+      .theme-black {
+        background: #1c1e22;
+        color: #fff;
+      }
+      .theme-grey {
+        background: #333;
+        color: #fff;
+      }
+      .img-background {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        color: #fff;
+      }
+      .img-background--mountain {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0,0,0,0.2)), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/22318/132.png');
+      }
+      .img-background--waterfall {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/22318/103.png');
+      }
+      .img-background--boat {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('http://img.hb.aicdn.com/d192ead34fdff902d0136097fb03049ca5ad88b2ecb51-zK0Fsm_fw658');
+      }
+      .img-background--sea {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('http://img.hb.aicdn.com/77773f6b1e4679551d63f93201515e46de1d7b3921782-Cy6pdW_fw658');
+      }
+      .img-background--shark {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('http://img.hb.aicdn.com/fdf0e53170470313a6e39a116d39e838179ead8a73cf7-24yu28_fw658');
+      }
+
+      .img-background--forest {
+           background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/22318/166.png');
+           background: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/22318/166.png');
+           background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/22318/166.png');
+           background-size: cover;
+           background-repeat: no-repeat;
+           color: #fff;
+      }
+    </style>
+</head>
+
+<body>
+  <div class="l-grid l-grid--4x4 l-full-height">
+    <div class="img-background img-background--shark theme-peach l-grid__item l-grid align-center l-span-column-2 l-span-row-2">
+      <div class="content">
+        <h2 class="heading">Peach</h2>
+      </div>
+    </div>
+    <div class="img-background img-background--forest align-center l-grid__item l-grid l-span-column-2">
+      <div class="content">
+        <h2 class="heading">Forest</h2>
+      </div>
+    </div>
+    <div class="img-background img-background--waterfall align-center l-grid l-grid__item l-span-column-2">
+      <div class="content">
+        <h2 class="heading">Waterfall</h2>
+      </div>
+    </div>
+    <div class="img-background img-background--mountain align-center l-grid l-grid__item l-span-column-2">
+      <div class="content">
+        <h2 class="heading">Mountains</h2>
+      </div>
+    </div>
+    <div class="img-background img-background--boat theme-black l-grid l-grid__item align-center">
+      <div class="content">
+        <h2 class="heading">Dark grey</h2>
+      </div>
+    </div>
+    <div class="img-background img-background--sea theme-grey l-grid l-grid__item align-center">
+      <div class="content">
+        <h2 class="heading">Grey</h2>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
