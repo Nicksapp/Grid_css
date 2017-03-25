@@ -2,6 +2,8 @@
 
 > CSS Grid 栅格式布局最佳实践
 
+[在线预览](http://nickgo.net/Grid_css/grid-%E5%9F%BA%E6%9C%AC%E5%AE%9E%E4%BE%8B.html)
+
 请升级至浏览器最新版本以支持显示~
 
 ![](http://7xo8ne.com1.z0.glb.clouddn.com/Jietu20170324-204244@2x.jpg)
